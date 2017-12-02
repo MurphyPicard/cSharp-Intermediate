@@ -16,7 +16,7 @@ namespace cSharp_Intermediate
             Console.WriteLine("Hi {0}, I am {1}", to, Name);
         }
 
-        public Person Parse(string str)
+        public static Person Parse(string str)
         {
             var person = new Person();
             person.Name = str;
@@ -31,9 +31,13 @@ namespace cSharp_Intermediate
     {
         static void Main(string[] args)
         {
-            var bob = new Person();
-            bob.Name = "Bob";
+            // Because we made Parse a static method
+            var bob = Person.Parse("Bob");
             bob.Introduce("Ara");
+
+            //var bob = new Person();
+            //bob.Name = "Bob";
+            //bob.Introduce("Ara");
         }
     }
 }
