@@ -6,10 +6,34 @@ using System.Threading.Tasks;
 
 namespace cSharp_Intermediate
 {
+
+    public class Person
+    {
+        public string Name;
+
+        public void Introduce(string to)
+        {
+            Console.WriteLine("Hi {0}, I am {1}", to, Name);
+        }
+
+        public Person Parse(string str)
+        {
+            var person = new Person();
+            person.Name = str;
+            return person;
+
+
+
+        }
+    }
+
     class Program
     {
         static void Main(string[] args)
         {
+            var bob = new Person();
+            bob.Name = "Bob";
+            bob.Introduce("Ara");
         }
     }
 }
