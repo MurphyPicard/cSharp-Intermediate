@@ -6,15 +6,32 @@ using System.Threading.Tasks;
 
 namespace cSharp_Intermediate
 {
+    public class Shape
+    {
+        public void Draw()
+        {
+
+        }
+    }
+
+    public class Circle : Shape
+    {
+
+    }
+
+    public class Image : Shape
+    {
+        
+    }
+
     class Program
     {
         static void Main(string[] args)
         {
-            // Need to see the ildasm for Birthdate
 
-            var person = new Person();
-            person.Birthdate = new DateTime(1980, 8, 7);
-            Console.WriteLine(person.Age);
+            //var person = new Person();
+            //person.Birthdate = new DateTime(1980, 8, 7);
+            //Console.WriteLine(person.Age);
         }
     }
 }
